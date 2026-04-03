@@ -1,0 +1,48 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='360' viewBox='0 0 900 360'>
+<style>text{font-family:Arial,sans-serif;font-size:12px;fill:#222}.title{font-size:16px;font-weight:bold}.axis{stroke:#333;stroke-width:1}.grid{stroke:#ddd;stroke-width:1}.pt{stroke:white;stroke-width:1.5}</style>
+<text x='450.0' y='22' text-anchor='middle' class='title'>Best Completion tok/s by ctx_size: turbo vs f16</text>
+<line x1='70' y1='40.0' x2='880' y2='40.0' class='grid'/>
+<text x='62' y='44.0' text-anchor='end'>34.4</text>
+<line x1='70' y1='107.5' x2='880' y2='107.5' class='grid'/>
+<text x='62' y='111.5' text-anchor='end'>32.9</text>
+<line x1='70' y1='175.0' x2='880' y2='175.0' class='grid'/>
+<text x='62' y='179.0' text-anchor='end'>31.5</text>
+<line x1='70' y1='242.5' x2='880' y2='242.5' class='grid'/>
+<text x='62' y='246.5' text-anchor='end'>30.0</text>
+<line x1='70' y1='310.0' x2='880' y2='310.0' class='grid'/>
+<text x='62' y='314.0' text-anchor='end'>28.6</text>
+<line x1='70.0' y1='40' x2='70.0' y2='310' class='grid'/>
+<text x='70.0' y='328' text-anchor='middle'>32768</text>
+<line x1='232.0' y1='40' x2='232.0' y2='310' class='grid'/>
+<text x='232.0' y='328' text-anchor='middle'>65536</text>
+<line x1='394.0' y1='40' x2='394.0' y2='310' class='grid'/>
+<text x='394.0' y='328' text-anchor='middle'>98304</text>
+<line x1='556.0' y1='40' x2='556.0' y2='310' class='grid'/>
+<text x='556.0' y='328' text-anchor='middle'>131072</text>
+<line x1='718.0' y1='40' x2='718.0' y2='310' class='grid'/>
+<text x='718.0' y='328' text-anchor='middle'>163840</text>
+<line x1='880.0' y1='40' x2='880.0' y2='310' class='grid'/>
+<text x='880.0' y='328' text-anchor='middle'>196608</text>
+<line x1='70' y1='310' x2='880' y2='310' class='axis'/>
+<line x1='70' y1='40' x2='70' y2='310' class='axis'/>
+<text x='450.0' y='350' text-anchor='middle'>ctx_size</text>
+<text x='18' y='180.0' text-anchor='middle' transform='rotate(-90 18 180.0)'>completion tok/s</text>
+<polyline fill='none' stroke='#1f77b4' stroke-width='2.5' points='70.0,306.3 232.0,304.5 394.0,280.9 556.0,310.0 718.0,308.2 880.0,309.5'/>
+<circle class='pt' cx='70.0' cy='306.3' r='4' fill='#1f77b4'><title>turbo: ctx=32768, batch=512, ubatch=128, avg_completion_tok_s=28.63, rss=47006.0 MiB</title></circle>
+<circle class='pt' cx='232.0' cy='304.5' r='4' fill='#1f77b4'><title>turbo: ctx=65536, batch=1024, ubatch=128, avg_completion_tok_s=28.67, rss=47154.2 MiB</title></circle>
+<circle class='pt' cx='394.0' cy='280.9' r='4' fill='#1f77b4'><title>turbo: ctx=98304, batch=1024, ubatch=128, avg_completion_tok_s=29.18, rss=47306.0 MiB</title></circle>
+<circle class='pt' cx='556.0' cy='310.0' r='4' fill='#1f77b4'><title>turbo: ctx=131072, batch=1024, ubatch=128, avg_completion_tok_s=28.55, rss=47458.3 MiB</title></circle>
+<circle class='pt' cx='718.0' cy='308.2' r='4' fill='#1f77b4'><title>turbo: ctx=163840, batch=1024, ubatch=128, avg_completion_tok_s=28.59, rss=47609.0 MiB</title></circle>
+<circle class='pt' cx='880.0' cy='309.5' r='4' fill='#1f77b4'><title>turbo: ctx=196608, batch=512, ubatch=128, avg_completion_tok_s=28.56, rss=47763.3 MiB</title></circle>
+<line x1='720' y1='38' x2='738' y2='38' stroke='#1f77b4' stroke-width='3'/>
+<text x='744' y='42'>turbo</text>
+<polyline fill='none' stroke='#d62728' stroke-width='2.5' points='70.0,75.1 232.0,42.3 394.0,40.5 556.0,40.0 718.0,41.4 880.0,54.8'/>
+<circle class='pt' cx='70.0' cy='75.1' r='4' fill='#d62728'><title>f16: ctx=32768, batch=1024, ubatch=128, avg_completion_tok_s=33.63, rss=47624.8 MiB</title></circle>
+<circle class='pt' cx='232.0' cy='42.3' r='4' fill='#d62728'><title>f16: ctx=65536, batch=1024, ubatch=128, avg_completion_tok_s=34.34, rss=48391.0 MiB</title></circle>
+<circle class='pt' cx='394.0' cy='40.5' r='4' fill='#d62728'><title>f16: ctx=98304, batch=1024, ubatch=128, avg_completion_tok_s=34.38, rss=49160.5 MiB</title></circle>
+<circle class='pt' cx='556.0' cy='40.0' r='4' fill='#d62728'><title>f16: ctx=131072, batch=1024, ubatch=128, avg_completion_tok_s=34.39, rss=49928.8 MiB</title></circle>
+<circle class='pt' cx='718.0' cy='41.4' r='4' fill='#d62728'><title>f16: ctx=163840, batch=512, ubatch=128, avg_completion_tok_s=34.36, rss=50702.4 MiB</title></circle>
+<circle class='pt' cx='880.0' cy='54.8' r='4' fill='#d62728'><title>f16: ctx=196608, batch=1024, ubatch=128, avg_completion_tok_s=34.07, rss=51469.4 MiB</title></circle>
+<line x1='720' y1='56' x2='738' y2='56' stroke='#d62728' stroke-width='3'/>
+<text x='744' y='60'>f16</text>
+</svg>
