@@ -148,7 +148,7 @@ while [[ $# -gt 0 ]]; do
       shift 2
       ;;
     --output-dir)
-      output_dir=$2
+      output_root=$2
       shift 2
       ;;
     --extra-server-args)
