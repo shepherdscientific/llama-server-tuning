@@ -1,6 +1,6 @@
 # llama-server-tuning
 
-Benchmarking and tuning helpers for `llama-server` on local Apple Silicon machines.
+Benchmarking and tuning helpers for `llama-server` on local inference machines, with a strong focus on Apple Silicon but not limited to it.
 
 This repo grew out of a practical question: when running the same Qwen model on the same custom-built `llama-server`, do alternative KV cache strategies improve throughput, reduce memory pressure, or make larger context windows more practical?
 
@@ -19,7 +19,7 @@ The initial surprise was that the compressed/turbo KV path did not obviously win
 
 ## Why one-at-a-time benchmarking matters
 
-Running two large servers side by side on Apple Silicon makes it too easy to measure contention instead of model behavior. The later scripts in this repo intentionally run a single server at a time, wait for it to become healthy, benchmark it, stop it, and only then move to the next config.
+Running two large servers side by side makes it too easy to measure contention instead of model behavior. This is especially easy to do on Apple Silicon with shared unified memory, but the same benchmarking trap shows up on other local inference setups too. The later scripts in this repo intentionally run a single server at a time, wait for it to become healthy, benchmark it, stop it, and only then move to the next config.
 
 ## Typical workflow
 
@@ -60,6 +60,10 @@ Running two large servers side by side on Apple Silicon makes it too easy to mea
 - The most interesting comparisons are often at progressively larger prompt sizes, where memory pressure, checkpointing, and stability become the dominant factors.
 
 ## Publishing checklist
+
+## License
+
+This repository is licensed under GPL-3.0.
 
 Before publishing results, it helps to include:
 
