@@ -21,3 +21,6 @@ The generated SVG plots show:
 - lowest RSS by `ctx_size`
 
 These reports are intended to accompany the TSV summaries, not replace them.
+
+- [Aggregate plots](./plots/aggregate/README.md)
+  Combined view across pair-1, pair-2, and turbo-maxctx.
