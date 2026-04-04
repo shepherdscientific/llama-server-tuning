@@ -4,10 +4,10 @@ This directory contains selected benchmark and tuning artifacts copied from the 
 
 ## Included run folders
 
-- `intellyvest/f16-20260403-120306`
-- `intellyvest/turbo-20260403-130143`
-- `intellyvest/f16-20260403-140703`
-- `intellyvest/turbo-20260403-153548`
+- `apple-silicon/f16-20260403-120306`
+- `apple-silicon/turbo-20260403-130143`
+- `apple-silicon/f16-20260403-140703`
+- `apple-silicon/turbo-20260403-153548`
 
 ## Generated comparisons
 
