@@ -53,6 +53,24 @@ Running two large servers side by side makes it too easy to measure contention i
   --right-label f16
 ```
 
+## Results
+
+The published Apple Silicon result bundle is under [`results/apple-silicon`](./results/apple-silicon). Start with the comparison writeups and max-context summary:
+
+- [Pair 1 comparison](./results/apple-silicon/turbo-20260403-130143/compare-turbo-vs-f16.md)
+- [Pair 2 comparison](./results/apple-silicon/turbo-20260403-153548/compare-turbo-vs-f16.md)
+- [Turbo max-context summary](./results/apple-silicon/turbo-maxctx-20260403-165708/turbo-maxctx-summary.md)
+- [Source provenance](./results/apple-silicon/source-provenance.md)
+- [Architecture-scoped plots](./results/apple-silicon/plots/aggregate/README.md)
+
+### Highlights from the published runs
+
+- Fastest published `f16` config: `ctx=131072`, `batch=1024`, `ubatch=128` at `34.39` completion tok/s with `49928.8 MiB` average RSS.
+- Fastest published turbo config: `ctx=98304`, `batch=1024`, `ubatch=128` at `29.18` completion tok/s with `47306.0 MiB` average RSS.
+- Most memory-efficient published `f16` config: `ctx=32768`, `batch=512`, `ubatch=128` at `47612.7 MiB` average RSS.
+- Most memory-efficient published turbo config: `ctx=32768`, `batch=1024`, `ubatch=128` at `47003.7 MiB` average RSS.
+- Published max-context turbo sweep remained healthy through `ctx=245760`; the fastest max-context setting there was `ctx=196608`, `batch=512`, `ubatch=128` at `5.16` completion tok/s with `48713.7 MiB` average RSS.
+
 ## Notes
 
 - If your active `llama-server` binary does not support a given cache type, the tuning sweep will fail health checks quickly. That is still useful because it tells you the config is not viable with that binary.
