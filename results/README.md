@@ -8,12 +8,13 @@ This directory contains selected benchmark and tuning artifacts copied from the 
 - `apple-silicon/turbo-20260403-130143`
 - `apple-silicon/f16-20260403-140703`
 - `apple-silicon/turbo-20260403-153548`
+- `apple-silicon/turbo-maxctx-20260403-165708`
 
 ## Generated comparisons
 
-- [Pair 1 graphs](./plots/pair-1/turbo-vs-f16-graphs.md)
+- [Pair 1 graphs](./apple-silicon/plots/pair-1/turbo-vs-f16-graphs.md)
   First comparison set.
-- [Pair 2 graphs](./plots/pair-2/turbo-vs-f16-graphs.md)
+- [Pair 2 graphs](./apple-silicon/plots/pair-2/turbo-vs-f16-graphs.md)
   Second comparison set.
 
 The generated SVG plots show:
@@ -22,5 +23,5 @@ The generated SVG plots show:
 
 These reports are intended to accompany the TSV summaries, not replace them.
 
-- [Aggregate plots](./plots/aggregate/README.md)
+- [Aggregate plots](./apple-silicon/plots/aggregate/README.md)
   Combined view across pair-1, pair-2, and turbo-maxctx.
